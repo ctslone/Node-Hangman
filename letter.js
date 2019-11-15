@@ -11,7 +11,7 @@ function Letter(letter) {
             return "_"
         }
     };
-    this.letterChecker = function (letter) {
+    this.letterGuess = function (letter) {
         if (this.letter === letter) {
             this.guessedYet = true;
             // console.log("guessed")
@@ -23,3 +23,5 @@ function Letter(letter) {
 }
 // var test = new Letter("A")
 // test.letterChecker()
+
+module.exports = Letter
