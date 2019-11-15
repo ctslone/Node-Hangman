@@ -1,0 +1,23 @@
+{
+  "name": "node-hangman",
+  "version": "1.0.0",
+  "description": "hangman game using node js",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctslone/Node-Hangman.git"
+  },
+  "author": "C. Slone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctslone/Node-Hangman/issues"
+  },
+  "homepage": "https://github.com/ctslone/Node-Hangman#readme"
+}
