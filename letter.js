@@ -1,18 +1,18 @@
-function Letter(letter) {
-    this.letter = letter.toString();
+function Letter(charachter) {
+    this.charachter = charachter.toString();
     this.guessedYet = false;
     this.letterResult = function () {
         if (this.guessedYet === true) {
-            // console.log(this.letter)
-            return this.letter
+            // console.log(this.charachter)
+            return this.charachter
         }
         else {
             // console.log("_")
             return "_"
         }
     };
-    this.letterGuess = function (letter) {
-        if (this.letter === letter) {
+    this.letterGuess = function (charachter) {
+        if (this.charachter === charachter) {
             this.guessedYet = true;
             // console.log("guessed")
         }
