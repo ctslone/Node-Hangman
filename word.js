@@ -3,6 +3,7 @@ var Letter = require("./letter")
 
 function Word(sportWord) {
     this.wordArray = sportWord.split("").map(eachLetter => { return new Letter(eachLetter) });
+    // console.log(this.wordArray)
 
     this.stringz = function () {
         var underscoreWord = [];
@@ -12,17 +13,31 @@ function Word(sportWord) {
         }
         console.log(underscoreWord.join(" ").toString())
     }
+    this.secondFn = function (userLetter) {
+        var hasBeenGuessed = false;
+        for (i = 0; i < this.wordArray.length; i++) {
+            if (this.wordArray[i].letterGuess(userLetter)) {
+                hasBeenGuessed = true;
+            } 
+            // else {
+            //     return false;
+            // }    
+        }
+        if (hasBeenGuessed) {
+            return true;
+            // console.log("true")
+        }
+        else {
+            return false;
+            // console.log("false")
+        };
+    }
     
 }
-    // this.makeWord = function () {
-    //     // returns a string representing the word. This should call the function on each letter object (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
-    // }
-    // this.callGuess = function (letter) {
-    //     // A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
-    // }
-    // console.log(this.wordArray)
+module.exports = Word;
 
 
-var test = new Word("Bicycle")
-test.stringz()
+// var test = new Word("Football")
+// test.secondFn()
+// Word("Football")
 // Word("Bicycle")
