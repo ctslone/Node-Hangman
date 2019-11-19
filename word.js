@@ -38,6 +38,6 @@ module.exports = Word;
 
 
 // var test = new Word("Football")
-// test.secondFn()
+// test.stringz()
 // Word("Football")
 // Word("Bicycle")
