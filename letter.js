@@ -11,14 +11,16 @@ function Letter(charachter) {
             return "_"
         }
     };
-    this.letterGuess = function (charachter) {
-        if (this.charachter === charachter) {
+    this.letterGuess = function (input) {
+        if (this.charachter === input) {
             this.guessedYet = true;
+            return true;
             // console.log("guessed")
         }
-        // else {
-        //     console.log("nope")
-        // }
+        else {
+            // console.log("nope")
+            return false;
+        }
     }
 }
 // var test = new Letter("A")

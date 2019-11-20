@@ -19,26 +19,35 @@ var allWords = ["hockey", "football"];
 function newWord() {
     var currentWord = allWords[Math.floor(Math.random() * allWords.length)];
     console.log(currentWord)
+    
     winningWord = new Word(currentWord);
     winningWord.stringz()
     // console.log(winningWord)
 }
+newWord()
 
 
 // start game/new game function 
-// function startGame() {
+function startGame() {
 
-//     inquirer.prompt([
-//         {
-//             type: "input",
-//             name: "user-guess",
-//             message: "Guess a letter: ",
-
-//         }
-//     ]).then(function (userRes) {
-
-//     })
-// }
-
-// startGame();
-newWord()
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "user_guess",
+            message: "Guess a letter: ",
+        }
+    ]).then(function (userRes) {
+        winningWord.guessCheck(userRes.user_guess)
+        winningWord.stringz()
+        if (winningWord.guessCheck(userRes.user_guess)) {
+            console.log("You guessed right! Keep it up!")
+            // startGame()
+        }
+        else {
+            guessesRemaining--
+            console.log("Incorrect! You have " + guessesRemaining + " guesses left.")
+            // startGame()
+        }
+    })
+}
+startGame();

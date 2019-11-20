@@ -13,11 +13,12 @@ function Word(sportWord) {
         }
         console.log(underscoreWord.join(" ").toString())
     }
-    this.secondFn = function (userLetter) {
+    this.guessCheck= function (userLetter) {
         var hasBeenGuessed = false;
         for (i = 0; i < this.wordArray.length; i++) {
             if (this.wordArray[i].letterGuess(userLetter)) {
                 hasBeenGuessed = true;
+                
             } 
             // else {
             //     return false;
