@@ -11,7 +11,7 @@ var colors = require("colors")
 
 var winningWord;
 var currentWord = "";
-var lettersGuessed = [];
+// var lettersGuessed = [];
 var guessesRemaining = 10;
 var allWords = ["hockey", "football", "soccer", "basketball", "baseball", "wrestling", "rugby", "lacrosse", "tennis"];
 // invoke a start game function right off the bat to start the game
@@ -73,7 +73,6 @@ function startGame() {
         }
         else {
             console.log("Congrats! You win. Time for a new word.")
-            // allGuessed = true;
             newWord()
             startGame()
         }
@@ -81,6 +80,8 @@ function startGame() {
 }
 
 // TESTING CODE
+
+// Tried to check for word completion this way but it would set all guessed to true whenever the user guessed the last letter of the word, regardless if all other letters had been guessed...problem with for loop or it sees the final letter as a end????
 
 // var allGuessed = false;
     // for (var i = 0; i < winningWord.wordArray.length; i++) {
@@ -92,7 +93,7 @@ function startGame() {
     //     }
     // }
     // if (allGuessed === false) {
-
+    // do the inquirer
     // }
 
 // function allLettersGuessed() {
@@ -109,4 +110,3 @@ function startGame() {
 //     }
 // }
 
-// allLettersGuessed()
